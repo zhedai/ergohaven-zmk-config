@@ -74,11 +74,11 @@
 
         games {
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4     &kp N5                       &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB         &kp T   &kp Q   &kp W         &kp E      &kp R                        &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp G   &kp A   &kp S         &kp D      &kp F                        &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp B   &kp Z   &kp X         &kp C      &kp V   &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &to 0   &kp LEFT_ALT  &kp RCTRL  &none   &kp SPACE    &trans  &trans  &trans  &trans  &trans
+&kp ESC         &kp N1          &kp N2  &kp N3        &kp N4     &kp N5                       &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB         &kp T           &kp Q   &kp W         &kp E      &kp R                        &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp G           &kp A   &kp S         &kp D      &kp F                        &trans  &trans  &trans  &trans  &trans  &trans
+&kp B           &kp LEFT_SHIFT  &kp Z   &kp X         &kp C      &kp V   &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &to 0   &kp LEFT_ALT  &kp LCTRL  &mo 1   &kp SPACE    &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "games";
