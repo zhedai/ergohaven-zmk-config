@@ -34,12 +34,6 @@
             key-positions = <36 57>;
             layers = <0 1>;
         };
-
-        tog_games {
-            bindings = <&tog_games>;
-            key-positions = <53 56 28>;
-            layers = <6>;
-        };
     };
 
     macros {
@@ -198,7 +192,7 @@
 &kp ESCAPE  &kp N1          &kp N2  &kp N3  &kp N4  &kp N5                    &trans  &trans  &trans  &trans  &trans  &trans
 &kp TAB     &kp T           &kp Q   &kp W   &kp E   &kp R                     &trans  &trans  &trans  &trans  &trans  &trans
 &kp G       &kp LEFT_SHIFT  &kp A   &kp S   &kp D   &kp F                     &trans  &trans  &trans  &trans  &trans  &trans
-&none       &kp LCTRL       &kp Z   &kp X   &kp C   &kp V   &kp B     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&tog_games  &kp LCTRL       &kp Z   &kp X   &kp C   &kp V   &kp B     &trans  &trans  &trans  &trans  &trans  &trans  &trans
                             &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
