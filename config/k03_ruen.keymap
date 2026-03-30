@@ -28,6 +28,12 @@
             key-positions = <15 16>;
             layers = <0>;
         };
+
+        caps {
+            bindings = <&kp CAPS>;
+            key-positions = <36 57>;
+            layers = <0 1>;
+        };
     };
 
     macros {
@@ -91,11 +97,11 @@
 
         en {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                          &kp N6  &kp N7     &kp N8     &kp N9    &kp N0    &kp BSPC
-&kp ESC    &kp Q   &kp W     &kp E     &kp R      &kp T                           &kp Y   &kp U      &kp I      &kp O     &kp P     &kp BSLH
-&kp TAB    &kp A   &kp S     &kp D     &kp F      &kp G                           &kp H   &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B   &kp LBKT     &kp RBKT   &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                   &kp LGUI  &kp LALT  &kp LCTRL  &mo 2   &kp SPACE    &kp ENTER  &mo 3   &kp RCTRL  &kp RALT   &kp RGUI
+&kp ESC    &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                          &kp N6  &kp N7           &kp N8         &kp N9      &kp N0    &kp MINUS
+&kp GRAVE  &kp Q   &kp W     &kp E     &kp R      &kp T                           &kp Y   &kp U            &kp I          &kp O       &kp P     &kp EQUAL
+&kp TAB    &kp A   &kp S     &kp D     &kp F      &kp G                           &kp H   &kp J            &kp K          &kp L       &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B   &kp LBKT     &kp RBKT   &kp N   &kp M            &kp COMMA      &kp DOT     &kp FSLH  &kp NUBS
+                   &kp LGUI  &kp LALT  &kp LCTRL  &mo 2   &kp SPACE    &kp ENTER  &mo 3   &kp RIGHT_SHIFT  &kp BACKSPACE  &kp DELETE
             >;
 
             display-name = "Base";
@@ -111,11 +117,11 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp GRAVE  &kp N1                   &kp N2                &kp N3              &kp N4              &kp N5                                                               &kp N6              &kp N7                     &kp N8               &kp N9                 &kp N0               &kp BSPC
-&kp ESC    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                                   &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp BSLH
+&kp ESC    &kp N1                   &kp N2                &kp N3              &kp N4              &kp N5                                                               &kp N6              &kp N7                     &kp N8               &kp N9                 &kp N0               &kp MINUS
+&kp GRAVE  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                                   &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp EQUAL
 &kp TAB    &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                                   &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &kp RU_CYRILLIC_HA    &kp RU_CYRILLIC_HARD_SIGN  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp RSHFT
-                                    &kp LGUI              &kp LALT            &kp LCTRL           &mo 2               &kp SPACE             &kp ENTER                  &mo 4               &kp RCTRL                  &kp RALT             &kp RGUI
+&kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &kp RU_CYRILLIC_HA    &kp RU_CYRILLIC_HARD_SIGN  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp NUBS
+                                    &kp LGUI              &kp LALT            &kp LCTRL           &mo 2               &kp SPACE             &kp ENTER                  &mo 4               &kp RIGHT_SHIFT            &kp BACKSPACE        &kp DELETE
             >;
 
             sensor-bindings =
@@ -129,11 +135,11 @@
 
         nav {
             bindings = <
-&kp F1  &kp F2  &kp F3        &kp F4    &kp F5         &kp F6                     &kp F7           &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &kp HOME      &kp UP    &kp END        &kp INS                    &kp PG_UP        &kp N7  &kp N8  &kp N9   &trans   &trans
-&trans  &trans  &kp LEFT      &kp DOWN  &kp RIGHT      &kp RET                    &kp PG_DN        &kp N4  &kp N5  &kp N6   &trans   &trans
-&trans  &trans  &kp LC(LEFT)  &kp CAPS  &kp LC(RIGHT)  &kp DEL  &trans    &trans  &kp PRINTSCREEN  &kp N1  &kp N2  &kp N3   &trans   &trans
-                &trans        &trans    &trans         &trans   &trans    &trans  &mo 5            &trans  &kp N0  &trans
+&kp F1              &kp F2      &kp F3        &kp F4    &kp F5         &kp F6                           &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&kp PRINTSCREEN     &kp INSERT  &kp HOME      &kp UP    &kp END        &kp PG_UP                        &none   &kp N7  &kp N8  &kp N9   &none    &none
+&kp K_CONTEXT_MENU  &none       &kp LEFT      &kp DOWN  &kp RIGHT      &kp PAGE_DOWN                    &none   &kp N4  &kp N5  &kp N6   &none    &none
+&none               &none       &kp LC(LEFT)  &none     &kp LC(RIGHT)  &kp RIGHT_ALT  &none     &none   &kp N0  &kp N1  &kp N2  &kp N3   &none    &none
+                                &trans        &trans    &trans         &trans         &trans    &trans  &mo 5   &trans  &trans  &trans
             >;
 
             display-name = "Nav";
@@ -141,11 +147,11 @@
 
         sym_en {
             bindings = <
-&trans  &trans     &kp AT    &kp DLLR   &kp HASH  &trans                       &trans     &trans    &kp CARET  &trans    &trans    &trans
-&trans  &trans     &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &trans     &kp LBKT  &kp UNDER  &kp RBKT  &trans    &trans
-&trans  &kp BSLH   &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
-&trans  &kp COMMA  &kp STAR  &kp COLON  &kp FSLH  &trans     &trans    &trans  &trans     &kp PIPE  &kp TILDE  &kp AMPS  &kp DOT   &trans
-                   &trans    &trans     &trans    &mo 5      &trans    &trans  &trans     &trans    &trans     &trans
+&none      &none      &kp AT    &kp HASH   &kp DLLR  &none                                &none      &none     &kp CARET  &none     &none     &none
+&kp TILDE  &none      &kp LT    &kp EQUAL  &kp GT    &kp SQT                              &kp DQT    &kp LBKT  &kp UNDER  &kp RBKT  &none     &none
+&kp TAB    &kp BSLH   &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                             &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
+&none      &kp COMMA  &kp STAR  &kp COLON  &kp FSLH  &kp RU_NUMERO  &kp COMMA    &kp DOT  &none      &kp PIPE  &kp TILDE  &kp AMPS  &kp DOT   &none
+                      &trans    &trans     &trans    &mo 5          &trans       &trans   &trans     &trans    &trans     &trans
             >;
 
             display-name = "Symbols";
@@ -154,34 +160,36 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &trans        &en AT        &en DLLR      &en HASH     &trans                           &trans          &trans    &en CARET    &trans    &trans      &trans
-&trans  &trans        &en LT        &kp EQUAL     &en GT       &en GRAVE                        &trans          &en LBKT  &kp UNDER    &en RBKT  &trans      &trans
-&trans  &kp RU_BSLH   &kp LPAR      &kp MINUS     &kp RPAR     &kp PLUS                         &kp RU_PERCENT  &en LBRC  &kp RU_SEMI  &en RBRC  &kp EXCL    &kp RU_QUESTION
-&trans  &kp RU_COMMA  &kp RU_ASTRK  &kp RU_COLON  &kp RU_FSLH  &kp RU_NUMERO  &trans    &trans  &trans          &en PIPE  &en TILDE    &en AMPS  &kp RU_DOT  &trans
-                      &trans        &trans        &trans       &mo 5          &trans    &trans  &trans          &trans    &trans       &trans
+&none      &none         &en AT        &en HASH      &en DLLR     &none                                      &none           &none     &en CARET    &none     &none       &none
+&en TILDE  &none         &en LT        &kp EQUAL     &en GT       &en SQT                                    &en DQT         &en LBKT  &kp UNDER    &en RBKT  &none       &none
+&kp TAB    &kp RU_BSLH   &kp LPAR      &kp MINUS     &kp RPAR     &kp PLUS                                   &kp RU_PERCENT  &en LBRC  &kp RU_SEMI  &en RBRC  &kp EXCL    &kp RU_QUESTION
+&none      &kp RU_COMMA  &kp RU_ASTRK  &kp RU_COLON  &kp RU_FSLH  &kp RU_NUMERO  &kp RU_COMMA    &kp RU_DOT  &none           &en PIPE  &en TILDE    &en AMPS  &kp RU_DOT  &none
+                         &trans        &trans        &trans       &mo 5          &trans          &trans      &trans          &trans    &trans       &trans
             >;
         };
 
         adj {
             bindings = <
-&bootloader  &trans  &trans  &trans  &trans  &trans                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
-&trans       &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans            &trans        &trans        &studio_unlock
-&trans       &trans  &trans  &trans  &trans  &trans                    &out OUT_BLE  &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &trans        &trans
-&trans       &trans  &trans  &trans  &trans  &trans  &trans    &trans  &out OUT_USB  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &trans        &trans
-                     &to 6   &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans            &trans
+&bootloader  &none  &none   &none   &none   &none                     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
+&none        &none  &none   &none   &none   &none                     &none         &none         &none             &none         &none         &studio_unlock
+&none        &none  &none   &none   &tog 6  &none                     &out OUT_BLE  &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &none         &none
+&none        &none  &none   &none   &none   &none   &none     &none   &out OUT_USB  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &none         &none
+                    &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans            &trans
             >;
 
             display-name = "Adjust";
         };
 
-        Games {
+        games {
             bindings = <
-&kp ESCAPE  &kp N1  &kp N2  &kp N3        &kp N4     &kp N5                       &trans  &trans  &trans  &trans  &trans  &trans
-&none       &kp T   &kp Q   &kp W         &kp E      &kp R                        &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT   &kp G   &kp A   &kp S         &kp D      &kp F                        &trans  &trans  &trans  &trans  &trans  &trans
-&none       &kp B   &kp X   &kp C         &kp V      &kp B   &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                    &to 0   &kp LEFT_ALT  &kp LCTRL  &none   &kp SPACE    &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE  &kp N1          &kp N2  &kp N3  &kp N4  &kp N5                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB     &kp T           &kp Q   &kp W   &kp E   &kp R                     &trans  &trans  &trans  &trans  &trans  &trans
+&kp G       &kp LEFT_SHIFT  &kp A   &kp S   &kp D   &kp F                     &trans  &trans  &trans  &trans  &trans  &trans
+&none       &kp LCTRL       &kp Z   &kp X   &kp C   &kp V   &kp B     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "Games";
         };
     };
 };
