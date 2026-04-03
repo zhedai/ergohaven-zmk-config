@@ -5,36 +5,6 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-    behaviors {
-        enc_vol: enc_vol {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENC_VOL";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
-        };
-
-        enc_tracks: enc_tracks {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENC_TRACKS";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp C_NEXT>, <&kp C_PREV>;
-        };
-
-        enc_left: enc_left {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENC_LEFT";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp F14>, <&kp F15>;
-        };
-
-        enc_none: enc_none {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENC_NONE";
-            #sensor-binding-cells = <0>;
-            bindings = <&none>, <&none>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -126,7 +96,9 @@
             >;
 
             display-name = "Base";
-            sensor-bindings = <&enc_left>, <&enc_vol>;
+            sensor-bindings =
+                <&inc_dec_kp F14 F15>,
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         ru {
@@ -139,55 +111,63 @@
                                              &kp LGUI              &kp LALT            &kp LCTRL           &mo 2               &kp SPACE    &kp ENTER  &mo 4               &sk RIGHT_SHIFT            &kp BACKSPACE        &kp DELETE
             >;
 
-            sensor-bindings = <&enc_left>, <&enc_vol>;
+            sensor-bindings =
+                <&inc_dec_kp F14 F15>,
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         nav {
             bindings = <
-&kp F1              &kp F2      &kp F3        &kp F4    &kp F5         &kp F6                            &kp F7       &kp F8     &kp F9     &kp F10    &kp F11          &kp F12
-&kp PRINTSCREEN     &kp INSERT  &kp HOME      &kp UP    &kp END        &kp PG_UP                         &kp KP_LPAR  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MULTIPLY  &kp KP_DIVIDE
-&kp K_CONTEXT_MENU  &none       &kp LEFT      &kp DOWN  &kp RIGHT      &kp PAGE_DOWN                     &kp KP_RPAR  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS      &kp KP_MINUS
-&none               &none       &kp LC(LEFT)  &none     &kp LC(RIGHT)  &none          &kp F16    &trans  &kp KP_N0    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT       &kp KP_EQUAL
-                                &trans        &trans    &trans         &trans         &trans     &trans  &mo 5        &trans     &trans     &trans
+&kp F1              &kp F2      &kp F3        &kp F4    &kp F5         &kp F6                             &kp F7       &kp F8     &kp F9     &kp F10    &kp F11          &kp F12
+&kp PRINTSCREEN     &kp INSERT  &kp HOME      &kp UP    &kp END        &kp PG_UP                          &kp KP_LPAR  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MULTIPLY  &kp KP_DIVIDE
+&kp K_CONTEXT_MENU  &none       &kp LEFT      &kp DOWN  &kp RIGHT      &kp PAGE_DOWN                      &kp KP_RPAR  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS      &kp KP_MINUS
+&none               &none       &kp LC(LEFT)  &none     &kp LC(RIGHT)  &none          &kp F19    &kp F13  &kp KP_N0    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT       &kp KP_EQUAL
+                                &trans        &trans    &trans         &trans         &trans     &trans   &mo 5        &trans     &trans     &trans
             >;
 
             display-name = "Nav";
-            sensor-bindings = <&enc_left>, <&enc_none>;
+            sensor-bindings =
+                <&inc_dec_kp F17 F18>,
+                <&inc_dec_kp C_NEXT C_PREV>;
         };
 
         sym_en {
             bindings = <
-&none  &none      &kp AT    &kp HASH   &kp DLLR  &none                             &none      &none     &kp CARET  &none     &none     &none
-&none  &none      &kp LT    &kp EQUAL  &kp GT    &kp SQT                           &kp DQT    &kp LBKT  &kp UNDER  &kp RBKT  &none     &none
-&none  &kp BSLH   &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                          &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
-&none  &kp COMMA  &kp STAR  &kp COLON  &kp FSLH  &kp RU_NUMERO  &none     &kp F13  &none      &kp PIPE  &kp TILDE  &kp AMPS  &kp DOT   &none
-                  &trans    &trans     &trans    &mo 5          &trans    &trans   &trans     &trans    &trans     &trans
+&none  &none      &kp AT    &kp HASH   &kp DLLR  &none                              &none      &none     &kp CARET  &none     &none     &none
+&none  &none      &kp LT    &kp EQUAL  &kp GT    &kp SQT                            &kp DQT    &kp LBKT  &kp UNDER  &kp RBKT  &none     &none
+&none  &kp BSLH   &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                           &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
+&none  &kp COMMA  &kp STAR  &kp COLON  &kp FSLH  &kp RU_NUMERO  &kp F19    &kp F13  &none      &kp PIPE  &kp TILDE  &kp AMPS  &kp DOT   &none
+                  &trans    &trans     &trans    &mo 5          &trans     &trans   &trans     &trans    &trans     &trans
             >;
 
             display-name = "Symbols";
-            sensor-bindings = <&enc_none>, <&enc_tracks>;
+            sensor-bindings =
+                <&inc_dec_kp F17 F18>,
+                <&inc_dec_kp C_NEXT C_PREV>;
         };
 
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&none  &none         &en AT        &en HASH      &en DLLR     &none                             &none           &none     &en CARET    &none     &none       &none
-&none  &none         &en LT        &kp EQUAL     &en GT       &en SQT                           &en DQT         &en LBKT  &kp UNDER    &en RBKT  &none       &none
-&none  &kp RU_BSLH   &kp LPAR      &kp MINUS     &kp RPAR     &kp PLUS                          &kp RU_PERCENT  &en LBRC  &kp RU_SEMI  &en RBRC  &kp EXCL    &kp RU_QUESTION
-&none  &kp RU_COMMA  &kp RU_ASTRK  &kp RU_COLON  &kp RU_FSLH  &kp RU_NUMERO  &none     &kp F13  &none           &en PIPE  &en TILDE    &en AMPS  &kp RU_DOT  &none
-                     &trans        &trans        &trans       &mo 5          &trans    &trans   &trans          &trans    &trans       &trans
+&none  &none         &en AT        &en HASH      &en DLLR     &none                              &none           &none     &en CARET    &none     &none       &none
+&none  &none         &en LT        &kp EQUAL     &en GT       &en SQT                            &en DQT         &en LBKT  &kp UNDER    &en RBKT  &none       &none
+&none  &kp RU_BSLH   &kp LPAR      &kp MINUS     &kp RPAR     &kp PLUS                           &kp RU_PERCENT  &en LBRC  &kp RU_SEMI  &en RBRC  &kp EXCL    &kp RU_QUESTION
+&none  &kp RU_COMMA  &kp RU_ASTRK  &kp RU_COLON  &kp RU_FSLH  &kp RU_NUMERO  &kp F19    &kp F13  &none           &en PIPE  &en TILDE    &en AMPS  &kp RU_DOT  &none
+                     &trans        &trans        &trans       &mo 5          &trans     &trans   &trans          &trans    &trans       &trans
             >;
 
-            sensor-bindings = <&enc_none>, <&enc_tracks>;
+            sensor-bindings =
+                <&inc_dec_kp F17 F18>,
+                <&inc_dec_kp C_NEXT C_PREV>;
         };
 
         adj {
             bindings = <
-&bootloader  &none  &none   &none   &none   &none                     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
-&none        &none  &none   &none   &none   &none                     &tog 6        &none         &none             &none         &none         &studio_unlock
-&none        &none  &none   &none   &none   &none                     &out OUT_BLE  &kp C_VOL_DN  &kp F13           &kp C_VOL_UP  &none         &none
-&none        &none  &none   &none   &none   &none   &none     &none   &out OUT_USB  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &none         &none
-                    &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans            &trans
+&bootloader  &none  &none   &none   &none   &none                     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
+&none        &none  &none   &none   &none   &none                     &none         &none         &none         &none         &none         &studio_unlock
+&none        &none  &none   &none   &none   &none                     &out OUT_BLE  &tog 6        &none         &none         &none         &none
+&none        &none  &none   &none   &none   &none   &trans    &trans  &out OUT_USB  &none         &none         &none         &none         &none
+                    &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans        &trans
             >;
 
             display-name = "Adjust";
