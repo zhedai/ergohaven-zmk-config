@@ -12,6 +12,27 @@
             #sensor-binding-cells = <0>;
             bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
         };
+
+        test_1: test_1 {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "TEST_1";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp W>, <&kp S>;
+        };
+
+        test_2: test_2 {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "TEST_2";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp E>, <&kp D>;
+        };
+
+        test_3: test_3 {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "TEST_3";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp R>, <&kp F>;
+        };
     };
 
     combos {
@@ -106,12 +127,12 @@
 
             display-name = "Base";
             sensor-bindings =
-                <&enc_vol>,
-                <&enc_vol>,
-                <&enc_vol>,
-                <&enc_vol>,
-                <&enc_vol>,
-                <&enc_vol>;
+                <&test_1>,
+                <&test_1>,
+                <&test_2>,
+                <&test_2>,
+                <&test_3>,
+                <&test_3>;
         };
 
         ru {
