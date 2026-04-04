@@ -186,9 +186,6 @@
             >;
 
             label = "Games";
-            sensor-bindings =
-                <&inc_dec_kp F17 F18>,
-                <&inc_dec_kp C_NEXT C_PREV>;
         };
     };
 };
