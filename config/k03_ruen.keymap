@@ -123,16 +123,16 @@
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        nav {
+        nav_num {
             bindings = <
-&kp F1           &kp F2      &kp F3        &kp F4    &kp F5         &kp F6                             &kp F7     &kp F8     &kp F9     &kp F10    &kp F11          &kp F12
+&none            &none       &none         &none     &none          &none                              &none      &none      &none      &none      &none            &none
 &kp PRINTSCREEN  &kp INSERT  &kp HOME      &kp UP    &kp END        &kp PG_UP                          &kp LPAR   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MULTIPLY  &kp KP_DIVIDE
 &none            &kp K_APP   &kp LEFT      &kp DOWN  &kp RIGHT      &kp PAGE_DOWN                      &kp RPAR   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS      &kp KP_MINUS
 &none            &none       &kp LC(LEFT)  &none     &kp LC(RIGHT)  &none          &kp F19    &kp F13  &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT       &kp EQUAL
                              &trans        &trans    &trans         &trans         &trans     &trans   &mo 4      &trans     &trans     &trans
             >;
 
-            display-name = "Nav";
+            display-name = "Navigation & Numbers";
             sensor-bindings =
                 <&inc_dec_kp F17 F18>,
                 <&inc_dec_kp C_NEXT C_PREV>;
@@ -153,7 +153,7 @@
                 <&inc_dec_kp C_NEXT C_PREV>;
         };
 
-        fun {
+        fun_sys {
             bindings = <
 &bootloader  &none  &none      &none         &out OUT_USB    &out OUT_BLE                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
 &none        &none  &none      &none         &none           &none                           &kp F9        &kp F10       &kp F11       &kp F12       &none         &studio_unlock
@@ -162,7 +162,7 @@
                     &trans     &trans        &trans          &trans        &trans    &trans  &trans        &trans        &trans        &trans
             >;
 
-            display-name = "Functions";
+            display-name = "Functions & System";
             sensor-bindings =
                 <&inc_dec_kp F17 F18>,
                 <&inc_dec_kp C_NEXT C_PREV>;
