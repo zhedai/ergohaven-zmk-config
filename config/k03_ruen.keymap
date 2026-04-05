@@ -85,7 +85,7 @@
         test_sym_ru: test_sym_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mo 7 &to_en>, <&macro_release>, <&to_ru>;
+            bindings = <&mo 7 &to_en>, <&macro_pause_for_release>, <&to_ru>;
 
             label = "TEST_SYM_RU";
         };
