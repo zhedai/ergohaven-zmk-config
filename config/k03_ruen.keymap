@@ -10,13 +10,13 @@
 
         cmb_to_en {
             bindings = <&layer_en>;
-            key-positions = <15 16>;
+            key-positions = <53 52>;
             layers = <1>;
         };
 
         cmb_to_ru {
             bindings = <&layer_ru>;
-            key-positions = <15 16>;
+            key-positions = <53 52>;
             layers = <0>;
         };
 
@@ -30,6 +30,12 @@
             bindings = <&caps_word>;
             key-positions = <36 52>;
             layers = <0 1>;
+        };
+
+        cmb_games {
+            bindings = <&tog 5>;
+            key-positions = <56 57>;
+            layers = <0 1 5>;
         };
     };
 
@@ -81,7 +87,7 @@
             label = "TEST_SYM_RU";
         };
 
-        mo_tog_emulation: test_adj {
+        tog_mo_emu: test_adj {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -128,7 +134,7 @@
 
         nav_num {
             bindings = <
-&none            &none       &none         &none     &none          &none                              &none      &none      &none      &none      &none            &none
+&kp F1           &kp F2      &kp F3        &kp F4    &kp F5         &kp F6                             &kp F7     &kp F8     &kp F9     &kp F10    &kp F11          &kp F12
 &kp PRINTSCREEN  &kp INSERT  &kp HOME      &kp UP    &kp END        &kp PG_UP                          &kp LPAR   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MULTIPLY  &kp KP_DIVIDE
 &none            &kp K_APP   &kp LEFT      &kp DOWN  &kp RIGHT      &kp PAGE_DOWN                      &kp RPAR   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS      &kp KP_MINUS
 &none            &none       &kp LC(LEFT)  &none     &kp LC(RIGHT)  &none          &kp F19    &kp F13  &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT       &kp EQUAL
@@ -144,11 +150,11 @@
         sym {
             display-name = "Symbols";
             bindings = <
-&none  &none      &kp AT    &kp HASH   &kp DLLR  &none                                    &none      &none     &kp CARET  &none     &none     &none
-&none  &none      &kp LT    &kp EQUAL  &kp GT    &kp SQT                                  &kp DQT    &kp LBKT  &kp UNDER  &kp RBKT  &none     &none
-&none  &kp BSLH   &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                                 &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
-&none  &kp COMMA  &kp STAR  &kp COLON  &kp FSLH  &none                &kp F19    &kp F13  &none      &kp PIPE  &kp TILDE  &kp AMPS  &kp DOT   &none
-                  &trans    &trans     &trans    &mo_tog_emulation 4  &trans     &trans   &trans     &trans    &trans     &trans
+&none          &none     &kp AT    &kp HASH   &kp DLLR  &none                              &none      &none     &kp CARET  &none     &none     &none
+&kp LS(GRAVE)  &none     &kp LT    &kp EQUAL  &kp GT    &kp SQT                            &kp DQT    &kp LBKT  &kp UNDER  &kp RBKT  &none     &none
+&none          &kp BSLH  &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                           &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
+&none          &none     &kp STAR  &kp COLON  &kp FSLH  &kp COMMA      &kp F19    &kp F13  &kp DOT    &kp PIPE  &kp TILDE  &kp AMPS  &none     &none
+                         &trans    &trans     &trans    &tog_mo_emu 4  &trans     &trans   &trans     &trans    &trans     &trans
             >;
 
             sensor-bindings =
@@ -161,7 +167,7 @@
 &bootloader  &none  &none      &none         &out OUT_USB    &out OUT_BLE                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
 &none        &none  &none      &none         &none           &none                           &kp F9        &kp F10       &kp F11       &kp F12       &none         &studio_unlock
 &none        &none  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_SHIFT  &none                           &kp F5        &kp F6        &kp F7        &kp F8        &none         &none
-&none        &none  &none      &none         &none           &none         &trans    &trans  &kp F1        &kp F2        &kp F3        &kp F4        &none         &tog 5
+&none        &none  &none      &none         &none           &none         &trans    &trans  &kp F1        &kp F2        &kp F3        &kp F4        &none         &none
                     &trans     &trans        &trans          &trans        &trans    &trans  &trans        &trans        &trans        &trans
             >;
 
