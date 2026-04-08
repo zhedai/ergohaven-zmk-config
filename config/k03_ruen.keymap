@@ -91,6 +91,24 @@
 
             label = "TEST_SYM_RU";
         };
+
+        mac_triple_quotes: mac_triple_quotes {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp ENTER &kp ENTER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp UP>;
+            label = "MAC_TRIPLE_QUOTES";
+        };
+    };
+
+    behaviors {
+        beh_triple_quotes: beh_triple_quotes {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BEH_TRIPLE_QUOTES";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            bindings = <&mac_triple_quotes>, <&kp>;
+        };
     };
 
     keymap {
@@ -131,7 +149,7 @@
 &kp F1           &kp F2      &kp F3        &kp F4    &kp F5         &kp F6                             &kp F7  &kp F8          &kp F9     &kp F10       &kp F11       &kp F12
 &kp PRINTSCREEN  &kp INSERT  &kp HOME      &kp UP    &kp END        &kp PG_UP                          &none   &kp LC(X)       &kp LC(C)  &kp LC(V)     &none         &none
 &none            &kp K_APP   &kp LEFT      &kp DOWN  &kp RIGHT      &kp PAGE_DOWN                      &none   &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &none
-&none            &none       &kp LC(LEFT)  &none     &kp LC(RIGHT)  &mo 3          &kp F19    &kp F13  &mo 4   &kp LC(Z)       &none      &kp LC(Y)     &none         &none
+&none            &none       &kp LC(LEFT)  &none     &kp LC(RIGHT)  &mo 4          &kp F19    &kp F13  &mo 3   &kp LC(Z)       &none      &kp LC(Y)     &none         &none
                              &trans        &trans    &trans         &trans         &trans     &trans   &mo 6   &trans          &trans     &trans
             >;
 
@@ -139,18 +157,6 @@
             sensor-bindings =
                 <&inc_dec_kp F17 F18>,
                 <&inc_dec_kp C_NEXT C_PREV>;
-        };
-
-        num {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp PIPE   &kp HASH   &kp CARET  &kp DOLLAR  &kp LPAR         &kp RPAR
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp PRCNT  &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_MULTIPLY  &kp KP_DIVIDE
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp COLON  &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_PLUS      &kp KP_MINUS
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp COMMA        &kp DOT
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans     &trans
-            >;
-
-            label = "Numpad";
         };
 
         mouse {
@@ -165,14 +171,26 @@
             label = "Mouse";
         };
 
+        num {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp PIPE   &kp HASH   &kp CARET  &kp DOLLAR  &kp LPAR         &kp RPAR
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp PRCNT  &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_MULTIPLY  &kp KP_DIVIDE
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp COLON  &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_PLUS      &kp KP_MINUS
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp COMMA        &kp DOT
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans     &trans
+            >;
+
+            label = "Numpad";
+        };
+
         sym {
             display-name = "Symbols";
             bindings = <
-&none          &none      &kp AT    &kp HASH   &kp DLLR  &none                          &none      &none     &kp CARET  &none     &none     &none
-&kp LS(GRAVE)  &kp GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp SQT                        &kp DQT    &kp LBKT  &kp UNDER  &kp RBKT  &none     &none
-&none          &kp BSLH   &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                       &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
-&none          &none      &kp STAR  &kp COLON  &kp FSLH  &kp COMMA  &kp F19    &kp F13  &kp DOT    &kp PIPE  &kp TILDE  &kp AMPS  &none     &none
-                          &trans    &trans     &trans    &mo 6      &trans     &trans   &trans     &trans    &trans     &trans
+&none      &none                           &kp AT    &kp HASH   &kp DLLR  &none                          &none                       &none     &kp CARET  &none     &none     &none
+&kp TILDE  &beh_triple_quotes GRAVE GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp SQT                        &beh_triple_quotes DQT DQT  &kp LBKT  &kp UNDER  &kp RBKT  &none     &none
+&none      &kp BSLH                        &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                       &kp PRCNT                   &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
+&none      &none                           &kp STAR  &kp COLON  &kp FSLH  &kp COMMA  &kp F19    &kp F13  &kp DOT                     &kp PIPE  &kp TILDE  &kp AMPS  &none     &none
+                                           &trans    &trans     &trans    &mo 6      &trans     &trans   &trans                      &trans    &trans     &trans
             >;
 
             sensor-bindings =
