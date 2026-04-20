@@ -113,6 +113,30 @@
             bindings = <&tog 7>;
             label = "LAYER_GAMES";
         };
+
+        char_lb: char_lb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N1>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "CHAR_LB";
+        };
+
+        char_rb: char_rb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp KP_N0 &kp KP_N1 &kp KP_N8 &kp KP_N7>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "CHAR_RB";
+        };
     };
 
     behaviors {
@@ -201,7 +225,7 @@
         sym {
             display-name = "Symbols";
             bindings = <
-&none      &none                           &kp AT    &kp HASH   &kp DLLR  &none                                  &none                       &none     &kp CARET  &none     &none     &none
+&none      &none                           &kp AT    &kp HASH   &kp DLLR  &none                                  &none                       &char_lb  &kp CARET  &char_rb  &none     &none
 &kp TILDE  &beh_triple_quotes GRAVE GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp SQT                                &beh_triple_quotes DQT DQT  &kp LBKT  &kp UNDER  &kp RBKT  &none     &none
 &none      &kp BSLH                        &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                               &kp PRCNT                   &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
 &none      &none                           &kp STAR  &kp COLON  &kp FSLH  &kp COMMA  &kp LA(F15)    &kp LA(F16)  &kp DOT                     &kp PIPE  &kp TILDE  &kp AMPS  &none     &none
