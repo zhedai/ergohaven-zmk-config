@@ -218,11 +218,11 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp ESC             &kp N1                   &kp N2                &kp N3              &kp N4              &kp N5                                      &kp N6              &kp N7                     &kp N8               &kp N9                 &kp N0               &kp RU_CYRILLIC_HARD_SIGN
-&kp RU_CYRILLIC_IO  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
-&kp TAB             &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp LSHFT           &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &kp F13      &kp F14    &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_COMMA         &kp RU_DOT
-                                             &kp LGUI              &kp LALT            &kp LCTRL           &mo_en_ru 2         &kp SPACE    &kp ENTER  &mo_en_ru 6         &kp RIGHT_SHIFT            &kp BACKSPACE        &kp DELETE
+&kp ESC             &kp N1                   &kp N2                &kp N3              &kp N4              &kp N5                                      &kp N6              &kp N7                                           &kp N8               &kp N9                 &kp N0               &none
+&kp RU_CYRILLIC_IO  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
+&kp TAB             &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O                                &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp LSHFT           &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &kp F13      &kp F14    &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_COMMA         &kp RU_DOT
+                                             &kp LGUI              &kp LALT            &kp LCTRL           &mo_en_ru 2         &kp SPACE    &kp ENTER  &mo_en_ru 6         &kp RIGHT_SHIFT                                  &kp BACKSPACE        &kp DELETE
             >;
 
             sensor-bindings =
@@ -232,11 +232,11 @@
 
         nav {
             bindings = <
-&kp F1           &kp F2      &kp F3        &kp F4    &kp F5         &kp F6                             &kp F7  &kp F8          &kp F9     &kp F10       &kp F11       &kp F12
-&kp PRINTSCREEN  &kp INSERT  &kp HOME      &kp UP    &kp END        &kp PG_UP                          &none   &kp LC(X)       &kp LC(C)  &kp LC(V)     &none         &none
-&kp TAB          &kp K_APP   &kp LEFT      &kp DOWN  &kp RIGHT      &kp PAGE_DOWN                      &none   &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &none
-&none            &none       &kp LC(LEFT)  &none     &kp LC(RIGHT)  &mo 4          &kp F15    &kp F16  &mo 3   &kp LC(Z)       &none      &kp LC(Y)     &none         &none
-                             &trans        &trans    &trans         &trans         &trans     &trans   &mo 6   &trans          &trans     &trans
+&none            &none       &none         &none     &none          &none                              &none  &none           &none      &none         &none         &none
+&kp PRINTSCREEN  &kp INSERT  &kp HOME      &kp UP    &kp END        &kp PG_UP                          &none  &kp LC(X)       &kp LC(C)  &kp LC(V)     &none         &none
+&kp TAB          &kp K_APP   &kp LEFT      &kp DOWN  &kp RIGHT      &kp PAGE_DOWN                      &none  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &none
+&none            &none       &kp LC(LEFT)  &none     &kp LC(RIGHT)  &mo 4          &kp F15    &kp F16  &mo 3  &kp LC(Z)       &none      &kp LC(Y)     &none         &none
+                             &trans        &trans    &trans         &trans         &trans     &trans   &mo 6  &trans          &trans     &trans
             >;
 
             display-name = "Navigation";
@@ -284,7 +284,7 @@
                 <&inc_dec_kp RS(F16) RC(F16)>;
         };
 
-        sys {
+        fun {
             bindings = <
 &bootloader  &none   &none    &none    &out OUT_USB  &out OUT_BLE                    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
 &none        &kp F1  &kp F2   &kp F3   &kp F4        &none                           &none         &none           &none         &none         &none         &studio_unlock
@@ -293,7 +293,7 @@
                      &trans   &trans   &trans        &trans        &trans    &trans  &trans        &trans          &trans        &trans
             >;
 
-            display-name = "System";
+            display-name = "Functions";
         };
 
         gam {
@@ -303,8 +303,20 @@
 &kp T   &kp TAB         &kp Q   &kp W   &kp E   &kp R                     &trans  &trans  &trans  &trans  &trans  &trans
 &kp G   &kp LEFT_SHIFT  &kp A   &kp S   &kp D   &kp F                     &trans  &trans  &trans  &trans  &trans  &trans
 &kp B   &kp LCTRL       &kp Z   &kp X   &kp C   &kp V   &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &mo 8   &trans    &trans  &none   &trans  &trans  &trans
             >;
+        };
+
+        gam_fun {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans   &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &none   &kp F1  &kp F2   &kp F3   &kp F4   &none
+&trans  &trans  &trans  &trans  &trans  &trans                    &none   &kp F5  &kp F6   &kp F7   &kp F8   &none
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &none   &kp F9  &kp F10  &kp F11  &kp F12  &none
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans
+            >;
+
+            label = "Games Functions";
         };
     };
 };
