@@ -116,7 +116,7 @@
         layer_games_on: layer_games_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 7 &kp RS(F23)>;
+            bindings = <&lang_to_en &tog 7 &kp RS(F23)>;
             label = "LAYER_GAMES_ON";
         };
 
@@ -303,7 +303,7 @@
 &kp T   &kp TAB         &kp Q   &kp W   &kp E   &kp R                     &trans  &trans  &trans  &trans  &trans  &trans
 &kp G   &kp LEFT_SHIFT  &kp A   &kp S   &kp D   &kp F                     &trans  &trans  &trans  &trans  &trans  &trans
 &kp B   &kp LCTRL       &kp Z   &kp X   &kp C   &kp V   &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &mo 8   &trans    &trans  &none   &trans  &trans  &trans
+                        &trans  &trans  &trans  &mo 8   &trans    &trans  &mo 9   &trans  &trans  &trans
             >;
         };
 
@@ -317,6 +317,18 @@
             >;
 
             label = "Games Functions";
+        };
+
+        gam_temp {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &none   &none   &none   &none   &none   &none
+&trans  &trans  &trans  &trans  &trans  &trans                    &none   &none   &none   &none   &none   &none
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &none   &none   &none   &none   &none   &none
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "Games Temp";
         };
     };
 };
