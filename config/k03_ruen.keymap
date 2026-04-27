@@ -321,11 +321,11 @@
 
         gam_temp {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &none   &none   &none   &none   &none   &none
-&trans  &trans  &trans  &trans  &trans  &trans                    &none   &none   &none   &none   &none   &none
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &none   &none   &none   &none   &none   &none
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans    &trans    &trans     &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp APOS  &kp LBKT  &kp MINUS  &kp RBKT  &none      &none
+&trans  &trans  &trans  &trans  &trans  &trans                    &none     &none     &kp SEMI   &none     &none      &none
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &none     &kp BSLH  &kp EQUAL  &kp FSLH  &kp COMMA  &kp DOT
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans     &trans
             >;
 
             label = "Games Temp";
