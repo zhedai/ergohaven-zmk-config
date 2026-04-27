@@ -319,7 +319,7 @@
             label = "Games Functions";
         };
 
-        gam_temp {
+        gam_sym {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans    &trans    &trans     &trans    &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &kp APOS  &kp LBKT  &kp MINUS  &kp RBKT  &none      &none
@@ -328,7 +328,7 @@
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans     &trans
             >;
 
-            label = "Games Temp";
+            label = "Games Symbols";
         };
     };
 };
