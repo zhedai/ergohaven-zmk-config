@@ -205,14 +205,11 @@
 &kp ESC    &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                          &kp N6  &kp N7           &kp N8         &kp N9      &kp N0     &none
 &none      &kp Q   &kp W     &kp E     &kp R      &kp T                           &kp Y   &kp U            &kp I          &kp O       &none      &none
 &kp TAB    &kp A   &kp S     &kp D     &kp F      &kp G                           &kp H   &kp J            &kp K          &kp L       &kp P      &none
-&kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B   &kp F13      &kp F14    &kp N   &kp M            &none          &none       &kp COMMA  &kp DOT
+&kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B   &none        &none      &kp N   &kp M            &none          &none       &kp COMMA  &kp DOT
                    &kp LGUI  &kp LALT  &kp LCTRL  &mo 2   &kp SPACE    &kp ENTER  &mo 5   &kp RIGHT_SHIFT  &kp BACKSPACE  &kp DELETE
             >;
 
             display-name = "En";
-            sensor-bindings =
-                <&inc_dec_kp RS(F13) RC(F13)>,
-                <&inc_dec_kp RS(F14) RC(F14)>;
         };
 
         ru {
@@ -221,28 +218,21 @@
 &kp ESC             &kp N1                   &kp N2                &kp N3              &kp N4              &kp N5                                      &kp N6              &kp N7                                           &kp N8               &kp N9                 &kp N0               &none
 &kp RU_CYRILLIC_IO  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
 &kp TAB             &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O                                &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp LSHFT           &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &kp F13      &kp F14    &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_COMMA         &kp RU_DOT
+&kp LSHFT           &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &none        &none      &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_COMMA         &kp RU_DOT
                                              &kp LGUI              &kp LALT            &kp LCTRL           &mo_en_ru 2         &kp SPACE    &kp ENTER  &mo_en_ru 5         &kp RIGHT_SHIFT                                  &kp BACKSPACE        &kp DELETE
             >;
-
-            sensor-bindings =
-                <&inc_dec_kp RS(F13) RC(F13)>,
-                <&inc_dec_kp RS(F14) RC(F14)>;
         };
 
         nav {
             bindings = <
-&none            &none       &none         &none     &none          &none                              &none  &none           &none      &none         &none         &none
-&kp PRINTSCREEN  &kp INSERT  &kp HOME      &kp UP    &kp END        &kp PG_UP                          &none  &kp LC(X)       &kp LC(C)  &kp LC(V)     &none         &none
-&kp TAB          &kp K_APP   &kp LEFT      &kp DOWN  &kp RIGHT      &kp PAGE_DOWN                      &none  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &none
-&none            &none       &kp LC(LEFT)  &none     &kp LC(RIGHT)  &mo 4          &kp F15    &kp F16  &mo 3  &kp LC(Z)       &none      &kp LC(Y)     &none         &none
-                             &trans        &trans    &trans         &trans         &trans     &trans   &mo 6  &trans          &trans     &trans
+&none            &none       &none         &none     &none          &none                            &none  &none           &none      &none         &none         &none
+&kp PRINTSCREEN  &kp INSERT  &kp HOME      &kp UP    &kp END        &kp PG_UP                        &none  &kp LC(X)       &kp LC(C)  &kp LC(V)     &none         &none
+&kp TAB          &kp K_APP   &kp LEFT      &kp DOWN  &kp RIGHT      &kp PAGE_DOWN                    &none  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &none
+&none            &none       &kp LC(LEFT)  &none     &kp LC(RIGHT)  &mo 4          &trans    &trans  &mo 3  &kp LC(Z)       &none      &kp LC(Y)     &none         &none
+                             &trans        &trans    &trans         &trans         &trans    &trans  &mo 6  &trans          &trans     &trans
             >;
 
             display-name = "Navigation";
-            sensor-bindings =
-                <&inc_dec_kp RS(F15) RC(F15)>,
-                <&inc_dec_kp RS(F16) RC(F16)>;
         };
 
         mouse {
@@ -272,16 +262,12 @@
         sym {
             display-name = "Symbols";
             bindings = <
-&none      &none                           &kp AT    &kp HASH   &kp DLLR  &none                         &none                       &sym_lb   &kp CARET  &sym_rb   &none      &none
-&kp TILDE  &beh_triple_quotes GRAVE GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp SQT                       &beh_triple_quotes DQT DQT  &kp LBKT  &kp UNDER  &kp RBKT  &sym_code  &sym_quote
-&none      &kp BSLH                        &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                      &kp PRCNT                   &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL   &kp QUESTION
-&none      &none                           &kp STAR  &kp COLON  &kp FSLH  &none     &kp F15    &kp F16  &none                       &kp PIPE  &kp TILDE  &kp AMPS  &kp COMMA  &kp DOT
-                                           &trans    &trans     &trans    &mo 6     &trans     &trans   &trans                      &trans    &trans     &trans
+&none      &none                           &kp AT    &kp HASH   &kp DLLR  &none                       &none                       &sym_lb   &kp CARET  &sym_rb   &none      &none
+&kp TILDE  &beh_triple_quotes GRAVE GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp SQT                     &beh_triple_quotes DQT DQT  &kp LBKT  &kp UNDER  &kp RBKT  &sym_code  &sym_quote
+&none      &kp BSLH                        &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                    &kp PRCNT                   &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL   &kp QUESTION
+&none      &none                           &kp STAR  &kp COLON  &kp FSLH  &none     &trans    &trans  &none                       &kp PIPE  &kp TILDE  &kp AMPS  &kp COMMA  &kp DOT
+                                           &trans    &trans     &trans    &mo 6     &trans    &trans  &trans                      &trans    &trans     &trans
             >;
-
-            sensor-bindings =
-                <&inc_dec_kp RS(F15) RC(F15)>,
-                <&inc_dec_kp RS(F16) RC(F16)>;
         };
 
         fun {
@@ -329,6 +315,70 @@
             >;
 
             label = "Games Symbols";
+        };
+
+        enc_def {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp F13    &kp F14  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans     &trans   &trans  &trans  &trans  &trans
+            >;
+
+            label = "Encoder Default";
+            sensor-bindings =
+                <&inc_dec_kp RS(F13) RC(F13)>,
+                <&inc_dec_kp RS(F14) RC(F14)>;
+        };
+
+        enc_pr {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp F15    &kp F16  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans     &trans   &trans  &trans  &trans  &trans
+            >;
+
+            label = "Encoder Pressed";
+            sensor-bindings =
+                <&inc_dec_kp RS(F15) RC(F15)>,
+                <&inc_dec_kp RS(F16) RC(F16)>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        env_def_en {
+            if-layers = <0>;
+            then-layer = <10>;
+        };
+
+        env_def_ru {
+            if-layers = <1>;
+            then-layer = <10>;
+        };
+
+        env_pr_nav {
+            if-layers = <2>;
+            then-layer = <11>;
+        };
+
+        env_pr_sym {
+            if-layers = <5>;
+            then-layer = <11>;
+        };
+
+        env_pr_gam_fun {
+            if-layers = <8>;
+            then-layer = <11>;
+        };
+
+        env_pr_gam_sym {
+            if-layers = <9>;
+            then-layer = <11>;
         };
     };
 };
