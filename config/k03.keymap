@@ -286,11 +286,11 @@
 
         fun {
             bindings = <
-&bootloader  &layer_en  &layer_ru  &none    &out OUT_USB  &out OUT_BLE                    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
-&none        &kp F1     &kp F2     &kp F3   &kp F4        &none                           &none         &none           &none         &none         &none         &studio_unlock
-&none        &kp F5     &kp F6     &kp F7   &kp F8        &none                           &none         &kp LEFT_SHIFT  &kp LCTRL     &kp LEFT_ALT  &kp LEFT_GUI  &none
-&none        &kp F9     &kp F10    &kp F11  &kp F12       &none         &trans    &trans  &none         &none           &none         &none         &none         &none
-                        &trans     &trans   &trans        &trans        &trans    &trans  &trans        &trans          &trans        &trans
+&bootloader  &layer_en  &layer_ru  &layer_games_on  &out OUT_USB  &out OUT_BLE                    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
+&none        &kp F1     &kp F2     &kp F3           &kp F4        &none                           &none         &none           &none         &none         &none         &studio_unlock
+&none        &kp F5     &kp F6     &kp F7           &kp F8        &none                           &none         &kp LEFT_SHIFT  &kp LCTRL     &kp LEFT_ALT  &kp LEFT_GUI  &none
+&none        &kp F9     &kp F10    &kp F11          &kp F12       &none         &trans    &trans  &none         &none           &none         &none         &none         &none
+                        &trans     &trans           &trans        &trans        &trans    &trans  &trans        &trans          &trans        &trans
             >;
 
             display-name = "Functions";
@@ -313,11 +313,11 @@
 
         gam_fun {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                      &none  &none   &mkp MCLK  &none    &none    &none
-&trans  &trans  &trans  &trans  &trans  &trans                      &none  &kp F1  &kp F2     &kp F3   &kp F4   &none
-&trans  &trans  &trans  &trans  &trans  &trans                      &none  &kp F5  &kp F6     &kp F7   &kp F8   &none
-&trans  &trans  &trans  &trans  &trans  &trans  &kp F15    &kp F16  &none  &kp F9  &kp F10    &kp F11  &kp F12  &none
-                &trans  &trans  &trans  &trans  &trans     &trans   &none  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                      &none   &none   &mkp MCLK  &none    &none    &none
+&trans  &trans  &trans  &trans  &trans  &trans                      &none   &kp F1  &kp F2     &kp F3   &kp F4   &none
+&trans  &trans  &trans  &trans  &trans  &trans                      &none   &kp F5  &kp F6     &kp F7   &kp F8   &none
+&trans  &trans  &trans  &trans  &trans  &trans  &kp F15    &kp F16  &none   &kp F9  &kp F10    &kp F11  &kp F12  &none
+                &trans  &trans  &trans  &trans  &trans     &trans   &mo 10  &trans  &trans     &trans
             >;
 
             label = "Games Functions";
@@ -332,13 +332,25 @@
 &trans  &trans  &trans  &trans  &trans  &trans                      &none      &kp LBKT   &kp RBKT   &none     &none  &none
 &trans  &trans  &trans  &trans  &trans  &trans                      &none      &kp SEMI   &kp APOS   &kp BSLH  &none  &none
 &trans  &trans  &trans  &trans  &trans  &trans  &kp F15    &kp F16  &none      &kp COMMA  &kp DOT    &kp FSLH  &none  &none
-                &trans  &trans  &trans  &none   &trans     &trans   &trans     &trans     &trans     &trans
+                &trans  &trans  &trans  &mo 10  &trans     &trans   &trans     &trans     &trans     &trans
             >;
 
             label = "Games Symbols";
             sensor-bindings =
                 <&inc_dec_kp RS(F15) RC(F15)>,
                 <&inc_dec_kp RS(F16) RC(F16)>;
+        };
+
+        gam_sys {
+            bindings = <
+&none  &layer_en  &layer_ru  &layer_games_off  &none   &none                    &none  &none   &none   &none   &none  &none
+&none  &none      &none      &none             &none   &none                    &none  &none   &none   &none   &none  &none
+&none  &none      &none      &none             &none   &none                    &none  &none   &none   &none   &none  &none
+&none  &none      &none      &none             &none   &none  &trans    &trans  &none  &none   &none   &none   &none  &none
+                  &trans     &trans            &trans  &none  &trans    &trans  &none  &trans  &trans  &trans
+            >;
+
+            label = "Games System";
         };
     };
 
