@@ -14,6 +14,24 @@
             key-positions = <36 57>;
             layers = <0 1>;
         };
+
+        cmb_notif_en {
+            bindings = <&kp RS(F24)>;
+            key-positions = <52 56 0>;
+            layers = <0>;
+        };
+
+        cmb_notif_ru {
+            bindings = <&kp RC(F24)>;
+            key-positions = <52 56 0>;
+            layers = <1>;
+        };
+
+        cmb_notif_games {
+            bindings = <&kp RS(F23)>;
+            key-positions = <52 56 0>;
+            layers = <7>;
+        };
     };
 
     macros {
