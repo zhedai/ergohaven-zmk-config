@@ -360,11 +360,11 @@
 
         gam_sys {
             bindings = <
-&none  &layer_en  &layer_ru  &layer_games_off  &none   &none                    &none  &none   &none   &none   &none  &none
-&none  &none      &none      &none             &none   &none                    &none  &none   &none   &none   &none  &none
-&none  &none      &none      &none             &none   &none                    &none  &none   &none   &none   &none  &none
-&none  &none      &none      &none             &none   &none  &trans    &trans  &none  &none   &none   &none   &none  &none
-                  &trans     &trans            &trans  &none  &trans    &trans  &none  &trans  &trans  &trans
+&none  &layer_en  &layer_ru  &layer_games  &none   &none                    &none  &none   &none   &none   &none  &none
+&none  &none      &none      &none         &none   &none                    &none  &none   &none   &none   &none  &none
+&none  &none      &none      &none         &none   &none                    &none  &none   &none   &none   &none  &none
+&none  &none      &none      &none         &none   &none  &trans    &trans  &none  &none   &none   &none   &none  &none
+                  &trans     &trans        &trans  &none  &trans    &trans  &none  &trans  &trans  &trans
             >;
 
             label = "Games System";
