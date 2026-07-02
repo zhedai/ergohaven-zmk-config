@@ -20,41 +20,35 @@
         sc_lang_en: sc_lang_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-                <&macro_press &kp LCTRL &kp LSHIFT>, 
-                <&macro_tap &kp N1>, 
-                <&macro_release &kp LCTRL &kp LSHIFT>;
+            bindings = <&kp LS(LC(N1))>;
             label = "SC_LANG_EN";
         };
         
         sc_lang_ru: sc_lang_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-                <&macro_press &kp LCTRL &kp LSHIFT>, 
-                <&macro_tap &kp N2>, 
-                <&macro_release &kp LCTRL &kp LSHIFT>;
+            bindings = <&kp LS(LC(N2))>;
             label = "SC_LANG_RU";
         };
         
         sc_notif_en: sc_notif_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RS(F24)>;
+            bindings = <&kp F24>;
             label = "SC_NOTIF_EN";
         };
         
         sc_notif_ru: sc_notif_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RC(F24)>;
+            bindings = <&kp F23>;
             label = "SC_NOTIF_RU";
         };
         
         sc_notif_games: sc_notif_games {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(F24)>;
+            bindings = <&kp F22>;
             label = "SC_NOTIF_GAMES";
         };
 
