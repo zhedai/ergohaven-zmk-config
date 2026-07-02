@@ -20,56 +20,36 @@
         sc_lang_en: sc_lang_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&none>,
-                <&kp LS(LC(N1))>;
-
+            bindings = <&kp LS(LC(N1))>;
             label = "SC_LANG_EN";
-            wait-ms = <30>;
         };
         
         sc_lang_ru: sc_lang_ru {
-                    compatible = "zmk,behavior-macro";
-                    #binding-cells = <0>;
-                    bindings =
-                        <&none>,
-                        <&kp LS(LC(N2))>;
-        
-                    label = "SC_LANG_RU";
-                    wait-ms = <30>;
-                };
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(N2))>;
+            label = "SC_LANG_RU";
+        };
         
         sc_notif_en: sc_notif_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&none>,
-                <&kp RS(F24)>;
-        
+            bindings = <&kp RS(F24)>;
             label = "SC_NOTIF_EN";
-            wait-ms = <30>;
         };
         
         sc_notif_ru: sc_notif_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&none>,
-                <&kp RC(F24)>;
-        
+            bindings = <&kp RC(F24)>;
             label = "SC_NOTIF_RU";
-            wait-ms = <30>;
         };
         
         sc_notif_games: sc_notif_games {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&none>,
-                <&kp RA(F24)>;
-        
+            bindings = <&kp RA(F24)>;
             label = "SC_NOTIF_GAMES";
-            wait-ms = <30>;
         };
 
         layer_en: layer_en {
@@ -156,7 +136,6 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(ENTER) &kp LS(ENTER) &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp UP>;
             label = "SYM_TRIPLE_QUOTES";
-            wait-ms = <30>;
         };
 
         sym_lb: sym_lb {
@@ -171,7 +150,6 @@
                 <&kp LEFT_ALT>;
 
             label = "SYM_LB";
-            wait-ms = <30>;
         };
 
         sym_rb: sym_rb {
@@ -186,7 +164,6 @@
                 <&kp LEFT_ALT>;
 
             label = "SYM_RB";
-            wait-ms = <30>;
         };
 
         sym_code: sym_code {
@@ -194,7 +171,6 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RIGHT_BRACE &kp LS(ENTER) &kp LS(ENTER) &kp LEFT_BRACE &kp C &kp O &kp D &kp E &kp RIGHT_BRACE &kp UP>;
             label = "SYM_CODE";
-            wait-ms = <30>;
         };
 
         sym_quote: sym_quote {
@@ -202,7 +178,6 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE &kp Q &kp U &kp O &kp T &kp E &kp RIGHT_BRACE &kp LS(ENTER) &kp LS(ENTER) &kp LEFT_BRACE &kp Q &kp U &kp O &kp T &kp E &kp RIGHT_BRACE &kp UP>;
             label = "SYM_QUOTE";
-            wait-ms = <30>;
         };
     };
 
