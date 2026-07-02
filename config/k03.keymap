@@ -17,17 +17,6 @@
     };
 
     macros {
-        sc_lang_ru: sc_lang_ru {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&none>,
-                <&kp LS(LC(N2))>;
-
-            label = "SC_LANG_RU";
-            wait-ms = <30>;
-        };
-
         sc_lang_en: sc_lang_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -38,6 +27,17 @@
             label = "SC_LANG_EN";
             wait-ms = <30>;
         };
+        
+        sc_lang_ru: sc_lang_ru {
+                    compatible = "zmk,behavior-macro";
+                    #binding-cells = <0>;
+                    bindings =
+                        <&none>,
+                        <&kp LS(LC(N2))>;
+        
+                    label = "SC_LANG_RU";
+                    wait-ms = <30>;
+                };
         
         sc_notif_en: sc_notif_en {
             compatible = "zmk,behavior-macro";
@@ -89,7 +89,10 @@
         layer_games: layer_games {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sc_lang_en &to 7 &sc_notif_games>;
+            bindings = 
+                <&to 7>,
+                <&sc_lang_en>,
+                <&sc_notif_games>;
             label = "LAYER_GAMES";
         };
 
