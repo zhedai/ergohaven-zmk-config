@@ -80,14 +80,14 @@
         layer_games_on: layer_games_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&lang_to_en &tog 7 &notif_games>;
+            bindings = <&layer_en &tog 7 &notif_games>;
             label = "LAYER_GAMES_ON";
         };
 
         layer_games_off: layer_games_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 7 &notif_en>;
+            bindings = <&tog 7 &layer_en>;
             label = "LAYER_GAMES_OFF";
         };
 
@@ -289,11 +289,11 @@
         sym {
             display-name = "Symbols";
             bindings = <
-&none      &none                           &kp AT    &kp HASH   &kp DLLR  &none                                 &none                       &sym_lb   &kp CARET  &sym_rb   &none      &none
-&kp TILDE  &beh_triple_quotes GRAVE GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp SQT                               &beh_triple_quotes DQT DQT  &kp LBKT  &kp UNDER  &kp RBKT  &sym_code  &sym_quote
-&none      &kp BSLH                        &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                              &kp PRCNT                   &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL   &kp QUESTION
-&none      &none                           &kp STAR  &kp COLON  &kp FSLH  &none     &layer_games_on    &kp F13  &none                       &kp PIPE  &kp TILDE  &kp AMPS  &kp COMMA  &kp DOT
-                                           &trans    &trans     &trans    &mo 6     &trans             &trans   &trans                      &trans    &trans     &trans
+&none      &none                           &kp AT    &kp HASH   &kp DLLR  &none                        &none                       &sym_lb   &kp CARET  &sym_rb   &none      &none
+&kp TILDE  &beh_triple_quotes GRAVE GRAVE  &kp LT    &kp EQUAL  &kp GT    &kp SQT                      &beh_triple_quotes DQT DQT  &kp LBKT  &kp UNDER  &kp RBKT  &sym_code  &sym_quote
+&none      &kp BSLH                        &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp PRCNT                   &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL   &kp QUESTION
+&none      &none                           &kp STAR  &kp COLON  &kp FSLH  &none     &none     &kp F13  &none                       &kp PIPE  &kp TILDE  &kp AMPS  &kp COMMA  &kp DOT
+                                           &trans    &trans     &trans    &mo 6     &trans    &trans   &trans                      &trans    &trans     &trans
             >;
 
             sensor-bindings =
@@ -330,11 +330,11 @@
 
         gam_fun {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                               &none   &none   &mkp MCLK  &none    &none    &none
-&trans  &trans  &trans  &trans  &trans  &trans                               &none   &kp F1  &kp F2     &kp F3   &kp F4   &none
-&trans  &trans  &trans  &trans  &trans  &trans                               &none   &kp F5  &kp F6     &kp F7   &kp F8   &none
-&trans  &trans  &trans  &trans  &trans  &trans  &layer_games_off    &kp F13  &none   &kp F9  &kp F10    &kp F11  &kp F12  &none
-                &trans  &trans  &trans  &trans  &trans              &trans   &mo 10  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                     &none   &none   &mkp MCLK  &none    &none    &none
+&trans  &trans  &trans  &trans  &trans  &trans                     &none   &kp F1  &kp F2     &kp F3   &kp F4   &none
+&trans  &trans  &trans  &trans  &trans  &trans                     &none   &kp F5  &kp F6     &kp F7   &kp F8   &none
+&trans  &trans  &trans  &trans  &trans  &trans  &none     &kp F13  &none   &kp F9  &kp F10    &kp F11  &kp F12  &none
+                &trans  &trans  &trans  &trans  &trans    &trans   &mo 10  &trans  &trans     &trans
             >;
 
             label = "Games Functions";
@@ -345,11 +345,11 @@
 
         gam_sym {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                               &kp GRAVE  &kp MINUS  &kp EQUAL  &none     &none  &none
-&trans  &trans  &trans  &trans  &trans  &trans                               &none      &kp LBKT   &kp RBKT   &none     &none  &none
-&trans  &trans  &trans  &trans  &trans  &trans                               &none      &kp SEMI   &kp APOS   &kp BSLH  &none  &none
-&trans  &trans  &trans  &trans  &trans  &trans  &layer_games_off    &kp F13  &none      &kp COMMA  &kp DOT    &kp FSLH  &none  &none
-                &trans  &trans  &trans  &mo 10  &trans              &trans   &trans     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                     &kp GRAVE  &kp MINUS  &kp EQUAL  &none     &none  &none
+&trans  &trans  &trans  &trans  &trans  &trans                     &none      &kp LBKT   &kp RBKT   &none     &none  &none
+&trans  &trans  &trans  &trans  &trans  &trans                     &none      &kp SEMI   &kp APOS   &kp BSLH  &none  &none
+&trans  &trans  &trans  &trans  &trans  &trans  &none     &kp F13  &none      &kp COMMA  &kp DOT    &kp FSLH  &none  &none
+                &trans  &trans  &trans  &mo 10  &trans    &trans   &trans     &trans     &trans     &trans
             >;
 
             label = "Games Symbols";
