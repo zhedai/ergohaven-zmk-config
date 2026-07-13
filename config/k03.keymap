@@ -23,28 +23,28 @@
             bindings = <&kp LS(LC(N1))>;
             label = "SC_LANG_EN";
         };
-        
+
         sc_lang_ru: sc_lang_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(LC(N2))>;
             label = "SC_LANG_RU";
         };
-        
+
         sc_notif_en: sc_notif_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp F24>;
             label = "SC_NOTIF_EN";
         };
-        
+
         sc_notif_ru: sc_notif_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp F23>;
             label = "SC_NOTIF_RU";
         };
-        
+
         sc_notif_games: sc_notif_games {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -55,30 +55,21 @@
         layer_en: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-                <&to 0>,
-                <&sc_lang_en>,
-                <&sc_notif_en>;
+            bindings = <&to 0 &sc_lang_en &sc_notif_en>;
             label = "LAYER_EN";
         };
 
         layer_ru: layer_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-                <&to 1>,
-                <&sc_lang_ru>,
-                <&sc_notif_ru>;
+            bindings = <&to 1 &sc_lang_ru &sc_notif_ru>;
             label = "LAYER_RU";
         };
-        
+
         layer_games: layer_games {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = 
-                <&to 7>,
-                <&sc_lang_en>,
-                <&sc_notif_games>;
+            bindings = <&to 7 &sc_lang_en &sc_notif_games>;
             label = "LAYER_GAMES";
         };
 
@@ -96,44 +87,44 @@
 
             label = "MO_EN_RU";
         };
-        
+
         bt_0: bt_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 0>, <&macro_wait_time 500>, <&layer_en>;
-        
+
             label = "BT_0";
         };
-        
+
         bt_1: bt_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 1>, <&macro_wait_time 500>, <&layer_en>;
-        
+
             label = "BT_1";
         };
-        
+
         bt_2: bt_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 2>, <&macro_wait_time 500>, <&layer_en>;
-        
+
             label = "BT_2";
         };
-        
+
         bt_3: bt_3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 3>, <&macro_wait_time 500>, <&layer_en>;
-        
+
             label = "BT_3";
         };
-        
+
         bt_4: bt_4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 4>, <&macro_wait_time 500>, <&layer_en>;
-        
+
             label = "BT_4";
         };
 
@@ -235,7 +226,7 @@
             bindings = <
 &kp F1           &kp F2      &kp F3        &kp F4    &kp F5         &kp F6                                  &kp F7     &kp F8          &kp F9     &kp F10       &kp F11       &kp F12
 &kp PRINTSCREEN  &kp INSERT  &kp HOME      &kp UP    &kp END        &kp PG_UP                               &none      &kp LC(X)       &kp LC(C)  &kp LC(V)     &none         &none
-&kp TAB          &none       &kp LEFT      &kp DOWN  &kp RIGHT      &kp PAGE_DOWN                           &kp K_APP  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &none
+&kp TAB          &none       &kp LEFT      &kp DOWN  &kp RIGHT      &kp PAGE_DOWN                           &kp K_APP  &sk LEFT_SHIFT  &sk LCTRL  &sk LEFT_ALT  &kp LEFT_GUI  &none
 &caps_word       &none       &kp LC(LEFT)  &none     &kp LC(RIGHT)  &mo 4          &layer_games    &kp F13  &mo 3      &kp LC(Z)       &none      &kp LC(Y)     &none         &none
                              &trans        &trans    &trans         &trans         &trans          &trans   &mo 6      &trans          &trans     &trans
             >;
@@ -289,7 +280,7 @@
             bindings = <
 &none  &layer_en  &layer_ru  &layer_games  &out OUT_USB  &out OUT_BLE                    &bt_0   &bt_1           &bt_2      &bt_3         &bt_4         &bt BT_CLR_ALL
 &none  &kp F1     &kp F2     &kp F3        &kp F4        &none                           &none   &none           &none      &none         &none         &studio_unlock
-&none  &kp F5     &kp F6     &kp F7        &kp F8        &none                           &none   &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &none
+&none  &kp F5     &kp F6     &kp F7        &kp F8        &none                           &none   &sk LEFT_SHIFT  &sk LCTRL  &sk LEFT_ALT  &kp LEFT_GUI  &none
 &none  &kp F9     &kp F10    &kp F11       &kp F12       &none         &trans    &trans  &none   &none           &none      &none         &none         &none
                   &trans     &trans        &trans        &trans        &trans    &trans  &trans  &trans          &trans     &trans
             >;
