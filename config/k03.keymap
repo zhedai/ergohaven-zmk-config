@@ -87,7 +87,7 @@
             #binding-cells = <0>;
             bindings =
                 <&to 9 &sc_lang_en>,
-                <&sc_lang_ga>
+                <&sc_lang_ga>,
                 <&macro_wait_time 30>,
                 <&sc_notif_games>;
 
