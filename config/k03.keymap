@@ -32,6 +32,13 @@
             label = "SC_LANG_RU";
         };
 
+        sc_lang_ga: sc_lang_ga {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(N3))>;
+            label = "SC_LANG_GA";
+        };
+
         sc_notif_en: sc_notif_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -80,6 +87,7 @@
             #binding-cells = <0>;
             bindings =
                 <&to 9 &sc_lang_en>,
+                <&sc_lang_ga>
                 <&macro_wait_time 30>,
                 <&sc_notif_games>;
 
