@@ -127,6 +127,7 @@
                 <&macro_param_1to1 &mo MACRO_PLACEHOLDER>;
 
             label = "MO_EN_RU";
+            wait-ms = <0>;
         };
 
         bt_0: bt_0 {
