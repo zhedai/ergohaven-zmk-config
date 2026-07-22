@@ -44,6 +44,7 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LC(N1))>;
             label = "SC_LANG_EN";
+            wait-ms = <0>;
         };
 
         sc_lang_ru: sc_lang_ru {
@@ -51,6 +52,7 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LC(N2))>;
             label = "SC_LANG_RU";
+            wait-ms = <0>;
         };
 
         sc_lang_ga: sc_lang_ga {
@@ -58,6 +60,7 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LC(N3))>;
             label = "SC_LANG_GA";
+            wait-ms = <0>;
         };
 
         sc_notif_en: sc_notif_en {
@@ -85,9 +88,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&to 0 &sc_lang_en>,
+                <&to 0>,
                 <&macro_wait_time 30>,
-                <&sc_notif_en>;
+                <&sc_lang_en &sc_notif_en>;
 
             label = "LAYER_EN";
         };
@@ -96,9 +99,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&to 1 &sc_lang_ru>,
+                <&to 1>,
                 <&macro_wait_time 30>,
-                <&sc_notif_ru>;
+                <&sc_lang_ru &sc_notif_ru>;
 
             label = "LAYER_RU";
         };
@@ -107,9 +110,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&to 7 &sc_lang_en &sc_lang_ga>,
+                <&to 7>,
                 <&macro_wait_time 30>,
-                <&sc_notif_games>;
+                <&sc_lang_en &sc_lang_ga &sc_notif_games>;
 
             label = "LAYER_GAMES";
         };
