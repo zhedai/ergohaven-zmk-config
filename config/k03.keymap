@@ -134,15 +134,44 @@
             tap-ms = <30>;
         };
 
-        bt_prof: bt_prof {
+        bt_0: bt_0 {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1>,
-                <&bt BT_SEL MACRO_PLACEHOLDER>,
-                <&macro_wait_time 500>,
-                <&layer_en>;
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>, <&macro_wait_time 500>, <&layer_en>;
 
-            label = "BT_PROF";
+            label = "BT_0";
+        };
+
+        bt_1: bt_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>, <&macro_wait_time 500>, <&layer_en>;
+
+            label = "BT_1";
+        };
+
+        bt_2: bt_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2>, <&macro_wait_time 500>, <&layer_en>;
+
+            label = "BT_2";
+        };
+
+        bt_3: bt_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3>, <&macro_wait_time 500>, <&layer_en>;
+
+            label = "BT_3";
+        };
+
+        bt_4: bt_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4>, <&macro_wait_time 500>, <&layer_en>;
+
+            label = "BT_4";
         };
 
         sym_triple_quotes: sym_triple_quotes {
@@ -331,11 +360,11 @@
 
         sys {
             bindings = <
-&none  &layer_en  &layer_ru  &layer_games  &out OUT_USB  &out OUT_BLE                    &bt_prof 0  &bt_prof 1      &bt_prof 2  &bt_prof 3    &bt_prof 4    &bt BT_CLR_ALL
-&none  &kp F1     &kp F2     &kp F3        &kp F4        &none                           &none       &none           &none       &none         &none         &studio_unlock
-&none  &kp F5     &kp F6     &kp F7        &kp F8        &none                           &none       &sk LEFT_SHIFT  &sk LCTRL   &sk LEFT_ALT  &kp LEFT_GUI  &none
-&none  &kp F9     &kp F10    &kp F11       &kp F12       &none         &trans    &trans  &none       &none           &none       &none         &none         &none
-                  &trans     &trans        &trans        &trans        &trans    &trans  &trans      &trans          &trans      &trans
+&none  &layer_en  &layer_ru  &layer_games  &out OUT_USB  &out OUT_BLE                    &bt_0   &bt_1           &bt_2      &bt_3         &bt_4         &bt BT_CLR_ALL
+&none  &kp F1     &kp F2     &kp F3        &kp F4        &none                           &none   &none           &none      &none         &none         &studio_unlock
+&none  &kp F5     &kp F6     &kp F7        &kp F8        &none                           &none   &sk LEFT_SHIFT  &sk LCTRL  &sk LEFT_ALT  &kp LEFT_GUI  &none
+&none  &kp F9     &kp F10    &kp F11       &kp F12       &none         &trans    &trans  &none   &none           &none      &none         &none         &none
+                  &trans     &trans        &trans        &trans        &trans    &trans  &trans  &trans          &trans     &trans
             >;
 
             display-name = "System";
