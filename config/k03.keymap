@@ -122,18 +122,16 @@
             #binding-cells = <1>;
             bindings =
                 <&sc_lang_en>,
-                <&macro_wait_time 20>,
                 <&macro_press>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&sc_lang_ru>,
-                <&macro_wait_time 0>;
+                <&sc_lang_ru>;
 
             label = "KP_RUEN";
-            tap-ms = <30>;
+            tap-ms = <5>;
         };
 
         bt_0: bt_0 {
@@ -201,7 +199,7 @@
 &kp ESC             &kp N1                   &kp N2                &kp N3              &kp N4              &kp N5                                             &kp N6              &kp N7                                           &kp N8               &kp N9                 &kp N0               &none
 &kp RU_CYRILLIC_IO  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                 &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
 &kp TAB             &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                 &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O                                &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp LSHFT           &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &layer_en    &kp C_PLAY_PAUSE  &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp_ruen RU_COMMA    &kp_ruen RU_DOT
+&kp LSHFT           &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &layer_en    &kp C_PLAY_PAUSE  &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp_ruen COMMA       &kp_ruen DOT
                                              &kp LGUI              &kp LALT            &kp LCTRL           &mo 3               &kp SPACE    &kp ENTER         &mo 7               &kp RIGHT_SHIFT                                  &kp BACKSPACE        &kp DELETE
             >;
 
